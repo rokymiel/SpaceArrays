@@ -8,9 +8,9 @@ import android.graphics.Paint;
  * Created by student2 on 27.11.17.
  */
 
-public class MyRect implements  Drawable {
+public class MyRect extends Figures implements  Drawable {
     float x,y,size=20;
-    Paint paint= new Paint();
+
 
     public MyRect(float x, float y) {
         this.x = x;

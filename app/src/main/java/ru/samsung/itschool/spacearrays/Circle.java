@@ -1,5 +1,6 @@
 package ru.samsung.itschool.spacearrays;
 
+import android.content.Intent;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -10,11 +11,24 @@ import android.view.View;
  * Created by student2 on 27.11.17.
  */
 
-public class Circle implements  Drawable,Touchable,View.OnClickListener{
+public class Circle extends Figures implements  Drawable,Touchable,View.OnClickListener{
     float x,y,r=20;
-    Paint paint= new Paint();
+    Intent intent= this.getIntent();
+
+
+    public Intent getIntent() {
+        return intent;
+    }
+
+    boolean check1=intent.getBooleanExtra("check1",false);
+
     public  void  draw (Canvas canvas){
-        paint.setColor(Color.YELLOW);
+        if (check1 = false){
+            paint.setColor(Color.BLACK);
+        }
+        else {paint.setColor(Color.YELLOW);}
+
+
         canvas.drawCircle(x,y,r,paint);
     }
 
@@ -33,4 +47,7 @@ public class Circle implements  Drawable,Touchable,View.OnClickListener{
         this.r=20;
 
     }
+
+
+
 }

@@ -28,7 +28,8 @@ public class MyDraw extends View implements View.OnClickListener{
 		objects.add(new Circle(50,150));
 		objects.add(new MyRect(30,200));
 		objects.add(new MyRect(100,100));
-
+		objects.add(new RedCircle(600,900));
+		objects.add(new RedRect(460,680));
 
 
 
@@ -86,6 +87,7 @@ public class MyDraw extends View implements View.OnClickListener{
 		rocket.draw(canvas);
 		rocket.move();
 
+
 		for (Object object:objects){
 			if (object instanceof  Drawable) ((Drawable)object).draw(canvas);
 		}
@@ -106,4 +108,11 @@ public class MyDraw extends View implements View.OnClickListener{
 			if (object instanceof  View.OnClickListener) ((View.OnClickListener)object).onClick(view);
 		}
 	}
+
+	public void check (View view){
+		for (Object object:objects){
+			if (object instanceof  View.OnClickListener) ((View.OnClickListener)object).onClick(view);
+		}
+	}
+
 }

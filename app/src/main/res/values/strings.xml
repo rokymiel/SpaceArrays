@@ -3,5 +3,11 @@
 
     <string name="app_name">SpaceArrays</string>
     <string name="hello_world">Hello world!</string>
+    <string-array name="figures">
+        <item>Circle</item>
+        <item>Rect</item>
+        <item>RedCircle</item>
+        <item>RedRect</item>
+    </string-array>
 
 </resources>
