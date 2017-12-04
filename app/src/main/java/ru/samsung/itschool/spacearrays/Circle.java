@@ -13,14 +13,10 @@ import android.view.View;
 
 public class Circle extends Figures implements  Drawable,Touchable,View.OnClickListener{
     float x,y,r=20;
-    Intent intent= this.getIntent();
 
 
-    public Intent getIntent() {
-        return intent;
-    }
 
-    boolean check1=intent.getBooleanExtra("check1",false);
+   static boolean check1=false;
 
     public  void  draw (Canvas canvas){
         if (check1 = false){

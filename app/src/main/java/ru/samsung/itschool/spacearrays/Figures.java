@@ -9,6 +9,7 @@ import android.graphics.Paint;
  */
 
 abstract public class Figures {
+
     abstract void  draw (Canvas canvas);
     Paint paint= new Paint();
 

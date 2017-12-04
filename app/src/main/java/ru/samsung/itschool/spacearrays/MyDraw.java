@@ -15,6 +15,7 @@ import java.util.ArrayList;
 
 public class MyDraw extends View implements View.OnClickListener{
 
+	/*boolean check1,check2;*/
     ArrayList objects = new ArrayList();
 
 	public MyDraw(Context context, AttributeSet attrs) {
@@ -28,8 +29,8 @@ public class MyDraw extends View implements View.OnClickListener{
 		objects.add(new Circle(50,150));
 		objects.add(new MyRect(30,200));
 		objects.add(new MyRect(100,100));
-		objects.add(new RedCircle(600,900));
-		objects.add(new RedRect(460,680));
+		objects.add(new RedCircle(170,400));
+		objects.add(new RedRect(460,400));
 
 
 
@@ -107,12 +108,16 @@ public class MyDraw extends View implements View.OnClickListener{
 		for (Object object:objects){
 			if (object instanceof  View.OnClickListener) ((View.OnClickListener)object).onClick(view);
 		}
-	}
-
-	public void check (View view){
 		for (Object object:objects){
-			if (object instanceof  View.OnClickListener) ((View.OnClickListener)object).onClick(view);
+
 		}
 	}
+	public void check(boolean check1, boolean check2 ){
+		Circle.check1=check1;
+		RedCircle.check1=check1;
+
+	}
+
+
 
 }

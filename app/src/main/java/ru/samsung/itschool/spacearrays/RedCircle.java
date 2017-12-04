@@ -9,12 +9,17 @@ import android.graphics.Color;
 
 public class RedCircle extends Figures  implements  Drawable {
     float x,y,r=40;
+    static boolean check1=false;
     public RedCircle(float x, float y) {
         this.x = x;
         this.y = y;
     }
     public void  draw (Canvas canvas){
-        paint.setColor(Color.RED);
+        if (check1 == false){
+            paint.setColor(Color.BLACK);
+        }
+        else {paint.setColor(Color.RED);}
+
         canvas.drawCircle(x,y,r,paint);
     }
 }
