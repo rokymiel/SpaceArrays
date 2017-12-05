@@ -19,7 +19,7 @@ public class Circle extends Figures implements  Drawable,Touchable,View.OnClickL
    static boolean check1=false;
 
     public  void  draw (Canvas canvas){
-        if (check1 = false){
+        if (check1 == false){
             paint.setColor(Color.BLACK);
         }
         else {paint.setColor(Color.YELLOW);}
@@ -35,7 +35,7 @@ public class Circle extends Figures implements  Drawable,Touchable,View.OnClickL
     public void onTouch(MotionEvent event){
         /*this.x+=20;
         this.y+=20;*/
-        this.r+=5;
+        this.r+=1;
     }
 
     @Override

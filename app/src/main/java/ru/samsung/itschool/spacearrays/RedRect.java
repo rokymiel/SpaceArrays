@@ -8,10 +8,15 @@ import android.graphics.Color;
  */
 
 public class RedRect extends Figures implements  Drawable {
+    static boolean check2=false;
 
     @Override
     public void draw(Canvas canvas) {
-        paint.setColor(Color.RED);
+        if (check2 == false){
+            paint.setColor(Color.BLACK);
+        }
+        else {paint.setColor(Color.RED);};
+
         canvas.drawRect(x,y,x+size,y+size,paint);
     }
     float x,y,size=20;

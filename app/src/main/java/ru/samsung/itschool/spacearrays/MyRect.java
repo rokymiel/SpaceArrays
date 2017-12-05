@@ -10,7 +10,7 @@ import android.graphics.Paint;
 
 public class MyRect extends Figures implements  Drawable {
     float x,y,size=20;
-
+    static boolean check2=false;
 
     public MyRect(float x, float y) {
         this.x = x;
@@ -19,7 +19,11 @@ public class MyRect extends Figures implements  Drawable {
 
     @Override
     public void draw(Canvas canvas) {
-        paint.setColor(Color.YELLOW);
+        if (check2 == false){
+            paint.setColor(Color.BLACK);
+        }
+        else {paint.setColor(Color.YELLOW);}
+
         canvas.drawRect(x,y,x+size,y+size,paint);
     }
 }

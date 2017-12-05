@@ -68,7 +68,7 @@ public class MyDraw extends View implements View.OnClickListener{
 		for (Object object:objects){
 			if (object instanceof  Touchable) ((Touchable)object).onTouch(event);
 		}
-		return super.onTouchEvent(event) /*true*/;
+		return /*super.onTouchEvent(event)*/ true;
 	}
 
 	Paint paint = new Paint();
@@ -115,6 +115,8 @@ public class MyDraw extends View implements View.OnClickListener{
 	public void check(boolean check1, boolean check2 ){
 		Circle.check1=check1;
 		RedCircle.check1=check1;
+		MyRect.check2=check2;
+		RedRect.check2=check2;
 
 	}
 

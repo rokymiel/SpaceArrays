@@ -12,5 +12,11 @@ abstract public class Figures {
 
     abstract void  draw (Canvas canvas);
     Paint paint= new Paint();
+    Intent intent= this.getIntent();
+
+
+    public Intent getIntent() {
+        return intent;
+    }
 
 }
